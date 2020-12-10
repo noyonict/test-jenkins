@@ -9,7 +9,6 @@ pipeline {
 
         stage("build"){
             steps {
-                echo "Change made by ${CHANGE_AUTHOR} for the ${CHANGE_BRANCH}"
                 echo "Build stage"
                 echo "Build stage for auto trigger"
                 echo "Testing Environment variable ${NEW_VERSION}"
