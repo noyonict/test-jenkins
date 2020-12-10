@@ -4,6 +4,11 @@ pipeline {
     stages {
 
         stage("build"){
+            when {
+                expression {
+                    BRANCH_NAME == 'master' || BRANCH_NAME == 'dev'
+                }
+            }
             steps {
                 echo "Build stage"
                 echo "Build stage for auto trigger"
