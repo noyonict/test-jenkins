@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    environment {
+        NEW_VERSION = '1.2.0'
+    }
 
     stages {
 
@@ -7,6 +11,7 @@ pipeline {
             steps {
                 echo "Build stage"
                 echo "Build stage for auto trigger"
+                echo "Testing Environment variable ${NEW_VERSION}"
             }
         }
 
