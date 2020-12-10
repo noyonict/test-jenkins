@@ -22,4 +22,15 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo "Run Always"
+        }
+        success {
+            echo "Run success"
+        }
+        failure {
+            echo "Run failure"
+        }
+    }
 }
